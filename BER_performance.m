@@ -1,3 +1,24 @@
+% /*
+% BER performance of tail biting codes
+%     Copyright (C) 2017  sreekanth
+% 
+%     This program is free software: you can redistribute it and/or modify
+%     it under the terms of the GNU General Public License as published by
+%     the Free Software Foundation, either version 3 of the License, or
+%     (at your option) any later version.
+% 
+%     This program is distributed in the hope that it will be useful,
+%     but WITHOUT ANY WARRANTY; without even the implied warranty of
+%     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%     GNU General Public License for more details.
+% 
+%     You should have received a copy of the GNU General Public License
+%     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% 
+%  * Author: sreekanth dama
+%  * Contact: sreekanth@iith.ac.in
+%  **/
+
 clear all
 %coder -build max_log_map.prj;
 %matlabpool 24;
@@ -65,37 +86,3 @@ hold all
 H = legend('1','4','8','uncoded theory');%,'iter 10','iter 20','uncoded');
 % hold on
 
-% semilogy(Ebnodb,ppp(1,:),Ebnodb,ppp(2,:),Ebnodb,ppp(3,:),Ebnodb,ppp(4,:),Ebnodb,ppp(5,:),Ebnodb,ppp(6,:),Ebnodb,erfc(10.^(Ebnodb/20))/2);
-%  H = legend('iter 1','iter 2','iter 3','iter 5','iter 10','iter 18','uncoded');
-% %grid on
-% hold on
-% H = legend('iter 1');
-
-
-
-
-
-
-%% Trash
-
-% first encoder
-% y1 = turbo_enco(x);
-% %interleaver
-% i = 0:N-1;
-% f1=3;f2=10;
-% p = mod(f1*i+f2*(i.^2),N)+1;
-% x1 = x(p);
-% 
-% % second encoder
-% y2 = turbo_enco(x1);
-% 
-% code = reshape([x;y1;y2],1,[]);
-% %% viterbi decoding
-% z = turbo_viterbi(1-2*y1);
-% 
-% length(find(z-x))
-
-
-%% Turbo decoder
-
-%z1 = turbo_decoder(x,y1,y2);

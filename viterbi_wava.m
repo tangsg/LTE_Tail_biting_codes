@@ -1,11 +1,23 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%   Viterbi Decoding for tailbiting codes
-%   Based on WAVA from the paper "On two algorithms for tailbiting codes"
-%              -----------------                  
-%   Author: Dama Sreekanth            
-%                                                 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+% /*
+% Wrap Around Viterbi Algorithm
+%     Copyright (C) 2017  sreekanth
+% 
+%     This program is free software: you can redistribute it and/or modify
+%     it under the terms of the GNU General Public License as published by
+%     the Free Software Foundation, either version 3 of the License, or
+%     (at your option) any later version.
+% 
+%     This program is distributed in the hope that it will be useful,
+%     but WITHOUT ANY WARRANTY; without even the implied warranty of
+%     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+%     GNU General Public License for more details.
+% 
+%     You should have received a copy of the GNU General Public License
+%     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+% 
+%  * Author: sreekanth dama
+%  * Contact: sreekanth@iith.ac.in
+%  **/
 function [ipHat_v] = viterbi_wava(y,iter)
 
 % Viterbi decoding
